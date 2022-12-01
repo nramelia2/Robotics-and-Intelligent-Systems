@@ -1,0 +1,48 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+  info [
+    "In this example, the robot turns on a slope."
+    "Its accelerometer sensor is used to switch on the bottommost LED."
+  ]
+  title "Accelerometer"
+  basicTimeStep 8
+  contactProperties [
+    ContactProperties {
+      material2 "body"
+      coulombFriction [
+        0
+      ]
+      softCFM 0.1
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.15532375406613153 -0.08986715536767628 0.9837674653132853 4.37437670599419
+  position 0.43445676416584156 1.680093642711324 0.7348565589693854
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 0.6
+  location 0.6 0 0
+}
+E-puck {
+  hidden position_0_0 -250.9940340555993
+  hidden position_0_1 271.7978742275949
+  hidden linearVelocity_0 7.521304541674121e-05 1.3944708561231775e-05 1.9809921407054783e-08
+  hidden angularVelocity_0 -0.0009296422156519761 -4.049048883728602e-05 3.5097806070566175
+  hidden rotation_1 0 1 0 0.33337823158417307
+  hidden linearVelocity_1 0.004100683894356961 -0.09131562583066562 5.533332902949194e-09
+  hidden angularVelocity_1 4.994637739997996 0.22101107366937572 3.5232824535187284
+  hidden rotation_2 0 -1 0 4.662279288306916
+  hidden linearVelocity_2 -0.003950596918975384 0.09135285664526586 -7.251178113512779e-09
+  hidden angularVelocity_2 -4.996497064050225 -0.22109030449714204 3.5232921668044277
+  translation 0.20517325429779118 -4.6322879384490175e-05 -1.8721348381933733e-05
+  rotation 1.0738247985420087e-06 -1.515992376624811e-06 -0.9999999999982744 -1.6295926305020139
+  controller "gerak_robot_sederhana"
+}
