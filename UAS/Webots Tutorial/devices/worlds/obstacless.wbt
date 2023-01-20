@@ -1,0 +1,136 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+  info [
+    "In this example, the robot turns on a slope."
+    "Its accelerometer sensor is used to switch on the bottommost LED."
+  ]
+  title "Accelerometer"
+  basicTimeStep 8
+  contactProperties [
+    ContactProperties {
+      material2 "body"
+      coulombFriction [
+        0
+      ]
+      softCFM 0.1
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.20430252878081062 0.6348023075322983 -0.7451754874426799 0.636457679886616
+  position -1.8839611714488935 0.8432033742541437 0.7692835500918586
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 1 1
+}
+DEF BALL Solid {
+  translation 0.2 0 0.04979453984045526
+  rotation 0 1 0 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+  linearVelocity 0 0 -9.370655897500627e-16
+}
+WoodenBox {
+  translation 0.182506 -0.198396 0.05
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -0.0611639 -0.167303 0.05
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.0720462 0.29831 0.05
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -0.268296 0.300172 0.05
+  name "wooden box(4)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -0.295514 0.0777121 0.05
+  name "wooden box(3)"
+  size 0.1 0.1 0.1
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 0.6
+  location 0.6 0 0
+}
+E-puck {
+  hidden position_0_0 51.09403186952728
+  hidden position_0_1 46.170601681327554
+  hidden linearVelocity_0 0.0028670938423409655 -0.01662093519677454 0.00027433749270913807
+  hidden angularVelocity_0 0.19657368607718878 0.5543247794663064 -0.9849377868439397
+  hidden rotation_1 0 1 0 0.8285494120905862
+  hidden linearVelocity_1 -0.01835243763040366 -0.008669850689650774 0.000376424111427768
+  hidden angularVelocity_1 -0.8848252502674678 -2.3935908148046785 -0.9853360195545413
+  hidden rotation_2 0 -0.9999999999999999 0 4.094880776109138
+  hidden linearVelocity_2 0.02966918457617631 -0.026402155134919482 0.00021685774705671633
+  hidden angularVelocity_2 1.2779747238844585 3.502239602452707 -0.9846786397546481
+  translation -0.42761113539757845 -0.33076651045925753 -1.334329866322509e-05
+  rotation 0.003477757530709369 -0.0006152768707139587 -0.9999937632990167 -2.7838830306003906
+  controller "gerak_robot_sederhana"
+}
+DEF WALL_1 Solid {
+  translation 0.5 0 0.05
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.98 0.1
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE WALL_SHAPE
+}
+DEF WALL_3 Solid {
+  translation 0 -0.5 0.05
+  rotation 0 0 1 1.5708
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(3)"
+  boundingObject USE WALL_SHAPE
+}
+DEF WALL_2 Solid {
+  translation -0.5 0 0.05
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(2)"
+  boundingObject USE WALL_SHAPE
+}
+DEF WALL_4 Solid {
+  translation 0 0.5 0.05
+  rotation 0 0 1 1.5708
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(4)"
+  boundingObject USE WALL_SHAPE
+}

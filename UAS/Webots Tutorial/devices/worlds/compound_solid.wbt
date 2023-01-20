@@ -1,0 +1,179 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+  info [
+    "In this example, the robot turns on a slope."
+    "Its accelerometer sensor is used to switch on the bottommost LED."
+  ]
+  title "Accelerometer"
+  basicTimeStep 8
+  contactProperties [
+    ContactProperties {
+      material2 "body"
+      coulombFriction [
+        0
+      ]
+      softCFM 0.1
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.3035560220460153 0.21046444701032316 -0.9292784609707889 1.8987171281767765
+  position 0.5881606551135866 1.5924952635217857 0.9816881896806137
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 1 1
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 0.6
+  location 0.6 0 0
+}
+DEF BALL Solid {
+  translation 0.2 0 0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        baseColorMap ImageTexture {
+          url [
+            "C:/Users/ACER/Downloads/red_brick_wall.jpg"
+          ]
+        }
+        roughness 0.5
+        metalness 0
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  name "ball"
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+}
+E-puck {
+  hidden position_0_0 390.8021864329732
+  hidden position_0_1 333.8453783855015
+  hidden linearVelocity_0 0.00028490227046605994 0.00013103310986281174 -1.7686292323553604e-06
+  hidden angularVelocity_0 -0.015752989761698807 0.020287742351778455 -3.514070725121893
+  hidden rotation_1 0 1 0 1.2446973878388397
+  hidden linearVelocity_1 -0.07176516235690554 -0.05611052439384561 -1.0987210292699114e-07
+  hidden angularVelocity_1 3.058773411623254 -3.9232974835076733 -3.5273611566724123
+  hidden rotation_2 0 -1 0 5.446628202196194
+  hidden linearVelocity_2 0.0725776848174226 0.056482225406351706 -4.82231404142512e-08
+  hidden angularVelocity_2 -3.0903246222506358 3.9638361202604906 -3.5276745251212884
+  translation 0.39667477331414086 -0.43405976832695864 -1.8609618282663942e-05
+  rotation 0.0009380650548374272 0.00032419530843734353 0.9999995074655562 -2.4939823602388684
+  controller "gerak_robot_sederhana"
+}
+DEF WALL_1 Solid {
+  translation 0.5 0 0.05
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.98 0.1
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE WALL_SHAPE
+}
+DEF WALL_3 Solid {
+  translation 0 -0.5 0.05
+  rotation 0 0 1 1.5708
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(3)"
+  boundingObject USE WALL_SHAPE
+}
+DEF WALL_2 Solid {
+  translation -0.5 0 0.05
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(2)"
+  boundingObject USE WALL_SHAPE
+}
+DEF WALL_4 Solid {
+  translation 0 0.5 0.05
+  rotation 0 0 1 1.5708
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(4)"
+  boundingObject USE WALL_SHAPE
+}
+DEF DUMBELL Solid {
+  translation 0.1 -0.2 0.1
+  rotation 0 1 0 1.5708
+  children [
+    DEF G0 Group {
+      children [
+        Transform {
+          translation 0 0 0.05
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.8 0.8 0.8
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.03
+                subdivision 2
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0 -0.05
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.8 0.8 0.8
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.03
+                subdivision 2
+              }
+            }
+          ]
+        }
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.8 0.8 0.8
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.1
+            radius 0.01
+          }
+        }
+      ]
+    }
+  ]
+  name "solid(5)"
+  contactMaterial "dumbbell"
+  boundingObject USE G0
+  physics Physics {
+    mass 2
+    centerOfMass [
+      0 0 -0.02
+    ]
+  }
+}

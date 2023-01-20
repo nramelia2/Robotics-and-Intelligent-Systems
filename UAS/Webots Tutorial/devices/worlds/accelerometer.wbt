@@ -1,0 +1,157 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+  info [
+    "In this example, the robot turns on a slope."
+    "Its accelerometer sensor is used to switch on the bottommost LED."
+  ]
+  title "Accelerometer"
+  basicTimeStep 8
+  contactProperties [
+    ContactProperties {
+      material2 "body"
+      coulombFriction [
+        0
+      ]
+      softCFM 0.1
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.5422294967303581 0.20725991469463492 -0.814266848543102 2.484511293376148
+  position 0.6389983866650963 0.6822174191706891 1.9207381413396707
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Solid {
+  translation -0.13524596563230357 0.27592288478392873 0.049901900000000006
+  rotation -1.259216634291227e-13 -2.1572286612243804e-14 -1 8.104283677247688e-05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(4)"
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+  }
+  linearVelocity -1.0008836365282874e-17 -1.3675621062372932e-17 -2.7000623958883797e-16
+  angularVelocity 1.332267629550186e-16 -9.860761315262648e-32 -2.3353301454733136e-17
+}
+Solid {
+  translation -0.27029311255426647 0.017680772085942775 0.04990190000000001
+  rotation 3.041063740842148e-15 2.4422514717453563e-15 1 0.002742623934508372
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(2)"
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+  }
+  linearVelocity 3.940779451170984e-18 4.2629372186454566e-18 -2.557953848736361e-16
+  angularVelocity -1.9984014443252796e-16 1.332267629550187e-16 -1.540945857976569e-17
+}
+Solid {
+  translation 0.15624895137547123 0.27813299476379505 0.049901900000000006
+  rotation 2.3246968414425027e-13 -2.8550761295590697e-13 -1 1.0327139325013384e-05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(3)"
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+  }
+  linearVelocity 6.6143127289718824e-18 1.5280864101141387e-17 -2.69939875139585e-16
+  angularVelocity -1.9984014443252806e-16 3.3306690738754344e-17 -2.2670485570913557e-17
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 0.6
+  location 0.6 0 0
+}
+E-puck {
+  hidden position_0_0 -3489.1827081045967
+  hidden position_0_1 3510.790383185121
+  hidden linearVelocity_0 -4.8571747138780795e-05 0.00011762611352971334 -1.2867365680678528e-07
+  hidden angularVelocity_0 -0.00784179410692383 -0.003238138446115567 -7.888402293472445e-12
+  hidden rotation_1 0 0.9999999999999999 0 4.268322687253368
+  hidden linearVelocity_1 -6.476235254647175e-05 0.00015683487380458835 -8.768150942389074e-12
+  hidden angularVelocity_1 -0.007841794065006479 -0.0032381384287364476 -1.8495193869753632e-11
+  hidden rotation_2 0 0.9999999999999999 0 4.772981778911591
+  hidden linearVelocity_2 -6.47623526359081e-05 0.00015683487402221906 -7.522443793619021e-12
+  hidden angularVelocity_2 -0.007841794065052188 -0.0032381384286134093 2.705847468116892e-12
+  translation -0.01821790957120882 0.04457852936827563 -1.5901496189683548e-05
+  rotation 0.001491937170587838 0.002230202706150785 -0.9999964001532049 1.1791937787828317
+  controller "gerak_robot_sederhana"
+}
+Solid {
+  translation 0.27231800597799044 -0.012185151885931821 0.04990190000000001
+  rotation -3.713050554414526e-15 4.587336732739318e-15 1 0.00036603889756285624
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+  }
+  linearVelocity -1.9712129325725384e-18 5.78587902326234e-18 -2.55795384873636e-16
+  angularVelocity -1.3322676295501873e-16 6.661338147750924e-17 -2.949438322661794e-17
+}
+Solid {
+  translation 0.03459189969078194 -0.21337799951591266 0.04990190000000001
+  rotation -6.021613775674714e-15 1.7208975926378355e-14 1 0.0008892646607652399
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+  }
+  linearVelocity 1.0401788064953796e-17 4.22565833688514e-18 -2.70006239588838e-16
+  angularVelocity -1.3322676295501836e-16 2.6645352591003736e-16 2.5185261900591817e-17
+}
